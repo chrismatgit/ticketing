@@ -11,10 +11,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
-    - uses: digitalocean/action-doctl@v3
-      with:
-        token: ${{ secrets.DIGITALOCEAN_ACCESS_TOKEN }}
-    - run: doctl kubernetes cluster kubeconfig save ticketing
-    - run: kubectl rollout restart deployment auth-depl
-    - run: kubectl apply -f infra/k8s && kubectl apply -f infra/k8s-prod
+      - uses: actions/checkout@v2
+      - uses: digitalocean/action-doctl@v2
+        with:
+          token: ${{ secrets.DIGITALOCEAN_ACCESS_TOKEN }}
+      - run: doctl kubernetes cluster kubeconfig save ticketing
+      - run: kubectl apply -f infra/k8s && kubectl apply -f infra/k8s-prod
