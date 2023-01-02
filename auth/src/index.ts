@@ -6,7 +6,7 @@ import { app } from './app';
 mongoose.set('strictQuery', true);
 
 const start = async () => {
-  console.log('Starting up...');
+  console.log('Starting up.....');
 
   // Check if the the process.env has been defined
   if (!process.env.JWT_KEY) {
