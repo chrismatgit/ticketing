@@ -10,6 +10,7 @@ import { PaymentCreatedListener } from './events/listeners/payment-created-liste
 // Removing warning: Mongoose: the `strictQuery` option will be
 // switched back to `false` by default in Mongoose 7.
 mongoose.set('strictQuery', true);
+console.log('Starting up ...');
 
 const start = async () => {
   // Check if the the process.env has been defined
