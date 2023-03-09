@@ -2,7 +2,7 @@ import { natsWrapper } from './nats-wrapper';
 import { OrderCreatedListener } from './events/listeners/order-created-listener';
 
 const start = async () => {
-  console.log('Starting up....');
+  console.log('Starting up...');
   // Check if the the process.env has been defined
 
   if (!process.env.NATS_CLIENT_ID) {
